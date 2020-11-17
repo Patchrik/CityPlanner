@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Planner
 {
@@ -11,6 +12,8 @@ namespace Planner
       Building EightSixFive = new Building("865 Bellvue Rd");
 
       Building SpoopVille = new Building("666 Tragic Way");
+
+      City Simsville = new City("Simsville", "Bobby Robertson", "2077");
 
       Overton.Width = 1000;
       Overton.Depth = 650;
@@ -48,7 +51,17 @@ namespace Planner
 
       SpoopVille.PrintDeed();
 
+      Simsville.PrintCityDeets();
 
+      Simsville.PrintBuildingList();
+
+      Simsville.AddToBuildingList(Overton);
+
+      Simsville.AddToBuildingList(EightSixFive);
+
+      Simsville.AddToBuildingList(SpoopVille);
+
+      Simsville.PrintBuildingList();
 
     }
   }
